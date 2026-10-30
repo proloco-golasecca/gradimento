@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f5ef">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Raccontaci com'è andata a Terrore a Golasecca: il questionario di gradimento di Halloween 2026.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Questionario Halloween 2026 · Terrore a Golasecca</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Pro Loco Golasecca, torna all'inizio">
+          <span class="brand-mark" aria-hidden="true">G</span>
+          <span><strong>PRO LOCO</strong><small>GOLASECCA</small></span>
+        </a>
+        <span class="header-note">La tua voce per i prossimi eventi <span aria-hidden="true">↗</span></span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> QUESTIONARIO DI GRADIMENTO</p>
+            <h1 id="page-title">Ci racconti<br><em>com’è andata?</em></h1>
+            <p class="lead">Ogni festa nasce dalle persone che la vivono. Bastano 2 minuti per aiutarci a rendere i prossimi eventi ancora più belli.</p>
+            <div class="intro-meta"><span class="meta-dot"></span> Anonimo <span class="meta-separator">·</span> Circa 2 minuti <span class="meta-separator">·</span> Nessun account richiesto</div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+            <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span>
+            <div class="art-card"><span>La tua opinione<br>fa la differenza</span><strong>✳</strong></div>
+            <span class="art-caption">INSIEME, OGNI VOLTA MEGLIO</span>
+          </div>
+        </section>
+
+        <div id="local-notice" class="local-notice" hidden>
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <p><strong>Anteprima locale.</strong> Le risposte di prova restano solo in questo browser. La raccolta su Google Sheets si attiverà quando sarà configurato il collegamento.</p>
+        </div>
+
+        <section class="survey-layout" aria-label="Questionario">
+          <aside class="side-panel">
+            <p class="side-kicker">IL TUO CONTRIBUTO</p>
+            <h2>Facciamo<br>spazio alle<br><em>tue idee.</em></h2>
+            <p>Le risposte ci aiutano a capire cosa ha funzionato e cosa possiamo migliorare. Grazie per dedicarci un momento.</p>
+            <div class="side-doodle" aria-hidden="true"><span>✳</span><span>✦</span><span>✳</span></div>
+          </aside>
+
+          <div class="form-panel">
+            <div id="form-view">
+              <div class="form-heading"><span class="step-label">01 / IL TUO FEEDBACK</span><span class="required-note">* Campi obbligatori</span></div>
+              <form id="survey-form" novalidate>
+                <div class="question event-question">
+                  <span class="question-title">Evento valutato</span>
+                  <p class="event-badge">Halloween 2026 · Terrore a Golasecca</p>
+                  <select id="event-select" name="event" required hidden aria-label="Evento valutato"></select>
+                </div>
+
+                <fieldset class="question rating-question">
+                  <legend class="question-title">Quanto ti è piaciuto l'evento nel complesso? <span>*</span></legend>
+                  <p class="question-help">Da 1 (per niente) a 5 (moltissimo).</p>
+                  <div class="rating-options" data-name="overall"></div>
+                </fieldset>
+
+                <fieldset class="question rating-question">
+                  <legend class="question-title">Come valuti l'organizzazione? <span>*</span></legend>
+                  <p class="question-help">Informazioni, accoglienza e svolgimento.</p>
+                  <div class="rating-options" data-name="organization"></div>
+                </fieldset>
+
+                <fieldset class="question rating-question">
+                  <legend class="question-title">Come valuti le attività proposte? <span>*</span></legend>
+                  <p class="question-help">Programma, intrattenimento ed esperienza.</p>
+                  <div class="rating-options" data-name="activities"></div>
+                </fieldset>
+
+                <fieldset class="question choice-question">
+                  <legend class="question-title">Parteciperesti a un altro nostro evento? <span>*</span></legend>
+                  <div class="choice-options">
+                    <label class="choice-pill"><input type="radio" name="returnIntent" value="Sì" required><span>Sì, volentieri</span></label>
+                    <label class="choice-pill"><input type="radio" name="returnIntent" value="Forse"><span>Forse</span></label>
+                    <label class="choice-pill"><input type="radio" name="returnIntent" value="No"><span>No</span></label>
+                  </div>
+                </fieldset>
+
+                <div class="question text-question">
+                  <label class="question-title" for="liked">Cosa ti è piaciuto di più?</label>
+                  <p class="question-help">Anche una parola può esserci utile.</p>
+                  <textarea id="liked" name="liked" rows="3" maxlength="1000" placeholder="Raccontacelo qui..."></textarea>
+                </div>
+
+                <div class="question text-question">
+                  <label class="question-title" for="improve">Cosa potremmo migliorare?</label>
+                  <p class="question-help">Idee e suggerimenti sono sempre benvenuti.</p>
+                  <textarea id="improve" name="improve" rows="3" maxlength="1000" placeholder="Le tue idee per la prossima volta..."></textarea>
+                </div>
+
+                <div class="form-footer">
+                  <p>Il questionario è anonimo. Evita di inserire nomi, recapiti o altri dati personali nei commenti.</p>
+                  <button class="submit-button" id="submit-button" type="submit"><span>Invia il questionario</span><span aria-hidden="true">↗</span></button>
+                  <p id="form-error" class="form-error" role="alert" hidden></p>
+                </div>
+              </form>
+            </div>
+
+            <div id="success-view" class="success-view" hidden tabindex="-1">
+              <span class="success-symbol" aria-hidden="true">✳</span>
+              <p class="eyebrow" id="success-label">RISPOSTA REGISTRATA</p>
+              <h2>Grazie di cuore!</h2>
+              <p id="success-message">Il tuo contributo ci aiuterà a rendere i prossimi eventi ancora più belli.</p>
+              <button id="another-response" class="again-button" type="button">Compila un'altra risposta <span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>PRO LOCO GOLASECCA</span><span>Insieme, per il nostro paese <span aria-hidden="true">✳</span></span></footer>
+    </div>
+  </body>
+</html>
