@@ -48,3 +48,34 @@ textarea { width:100%; min-height:92px; resize:vertical; padding:14px 15px; back
 @media(max-width:720px) { .page-shell { padding:0 18px; }.site-header { height:80px; }.header-note { display:none; }.intro { grid-template-columns:1fr; padding:50px 0 42px; gap:35px; }.intro h1 { font-size:clamp(54px,12vw,76px); }.lead { font-size:15px; }.hero-art { height:220px; border-radius:130px 130px 12px 12px; }.art-card { top:36px; width:190px; height:146px; padding:20px; }.art-card span { font-size:22px; }.art-card strong { font-size:34px; }.art-caption { bottom:10px; }.survey-layout { display:block; margin-bottom:45px; }.side-panel { min-height:0; padding:34px 28px; }.side-kicker { margin-bottom:20px; }.side-panel h2 { font-size:38px; margin-bottom:12px; }.side-panel h2 br { display:none; }.side-panel > p:not(.side-kicker) { max-width:none; margin-bottom:0; }.side-doodle { display:none; }.form-panel { padding:30px 24px 38px; }.rating-pill { min-width:62px; }.rating-pill span { height:58px; }.rating-pill small { font-size:8px; }.site-footer { gap:15px; }.local-notice { align-items:flex-start; } }
 @media(max-width:390px) { .rating-options { gap:5px; }.rating-pill { min-width:48px; }.rating-pill span { height:54px; }.rating-pill small { font-size:7px; }.form-panel { padding-left:18px; padding-right:18px; }.form-heading { gap:10px; }.required-note { text-align:right; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
+
+/* Halloween 2026: atmosfera notturna, con il modulo su fondo chiaro. */
+:root { --ink:#281e2b; --muted:#665b68; --paper:#1d1727; --white:#fff9ef; --line:#e9dfd1; --forest:#34213a; --event-accent:#db6c2c; }
+body { background:radial-gradient(circle at 82% 8%,#50304b 0,transparent 32%),radial-gradient(circle at 8% 62%,#32213c 0,transparent 38%),var(--paper); }
+.site-header { border-color:#66505d; }
+.brand { color:#fff1dc; }.brand-mark { border-color:#e29b53; color:#f8bc73; }
+.header-note { color:#dcc6c8; }
+.eyebrow { color:#ffad66; }.eyebrow-line { background:#ffad66; }
+.intro h1 { color:#fff6e8; }.intro h1 em { color:#f8a356; }
+.lead { color:#e3d4d5; }.intro-meta { color:#c9b4be; }.meta-separator { color:#896b7c; }
+.hero-art { background:radial-gradient(circle at 70% 28%,#674258 0,#3c2948 48%,#241e35 100%); border:1px solid #8b5b70; box-shadow:0 28px 70px #0b071465; }
+.hero-art::after { content:""; position:absolute; inset:auto -12% -32% -12%; height:55%; background:radial-gradient(ellipse at 50% 100%,#171724 0 55%,transparent 56%); opacity:.8; }
+.halloween-moon { position:absolute; width:138px; height:138px; right:55px; top:30px; border-radius:50%; background:#ffe0a3; box-shadow:0 0 28px #ffd992a6,0 0 90px #e89d5e6e; }
+.halloween-bat { position:absolute; z-index:2; color:#24192e; filter:grayscale(1) brightness(.38); font-size:36px; }.bat-one { top:44px; left:76px; transform:rotate(-15deg); }.bat-two { top:98px; right:115px; font-size:25px; transform:rotate(17deg); }
+.art-orbit { border-color:#d9a8844f; }.art-spark { color:#ffcc83; z-index:2; }
+.art-card { z-index:3; top:91px; background:#fff4df; box-shadow:0 22px 50px #110d1c91; }.art-card span { color:#332337; }.art-card strong { font-size:42px; line-height:1; filter:drop-shadow(0 3px 3px #4b222350); }
+.art-caption { z-index:3; color:#ffdeb5; text-shadow:0 1px 8px #140d21; }
+.survey-layout { border-color:#d9bca5; box-shadow:0 26px 70px #09061170; }
+.side-panel { background:radial-gradient(circle at 65% 92%,#5b3044,transparent 48%),#2c2036; }
+.side-kicker { color:#f3b37e; }.side-panel h2 em { color:#f7aa69; }.side-panel > p:not(.side-kicker) { color:#e4d1d6; }
+.side-doodle { border-color:#a27173; color:#f7aa69; }
+.question-title { color:#322337; }.question-help,.required-note { color:#766b70; }
+.event-badge { background:#fff1df; border-color:#efc5a2; color:#713c36; }
+.rating-pill span,.choice-pill span,textarea { background:#fffcf6; border-color:#dccfc7; color:#3c2b3d; }
+.rating-pill small { color:#766b70; }.choice-pill span { color:#4a3947; }
+.rating-pill input:checked + span,.choice-pill input:checked + span { background:#422746; border-color:#422746; color:#fff9ef; }
+.rating-pill input:checked + span small { color:#f6d0b3; }
+.submit-button { background:#b84e1e; }.submit-button:hover { background:#963b18; filter:none; }
+.success-symbol { background:#fff0d8; color:#b84e1e; }.again-button { color:#422746; }
+.site-footer { color:#d2bdc5; }
+@media(max-width:720px) { .halloween-moon { width:105px; height:105px; top:20px; right:40px; }.bat-one { top:24px; left:50px; }.bat-two { top:70px; right:95px; }.art-card { top:45px; }.art-caption { font-size:8px; letter-spacing:.16em; } }
